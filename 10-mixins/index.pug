@@ -1,0 +1,27 @@
+mixin comment(commentData)
+    .comment
+        if commentData.postedByAdmin 
+            em (Posted By Admin)
+        .date= commentData.date
+        .author= commentData.author 
+        .text= commentData.text
+
+html 
+    head 
+        title mixins in pug
+        style. 
+            .comment {
+                font-family: sans-serif;
+                line-height: 1.5;
+                padding:10px;
+                border: 1px solid #555;
+                width: 250px;
+                }
+            .date { font-size: 85%}
+            .author{ font-size: 110%; font-weight: bold;}
+            .text{font-size:100%;}
+    body
+        - const c = { postedByAdmin: true,date: "04:02:2018", author: "kira", text: "hey mate" }
+        +comment(c)
+        - const c2 = { date: "04:02:2018", author: "kira", text: "hey mate" }
+        +comment(c2)

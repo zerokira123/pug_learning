@@ -1,0 +1,30 @@
+
+<html> 
+  <head> 
+    <title>mixins in pug</title>
+    <style>
+      .comment {
+          font-family: sans-serif;
+          line-height: 1.5;
+          padding:10px;
+          border: 1px solid #555;
+          width: 250px;
+          }
+      .date { font-size: 85%}
+      .author{ font-size: 110%; font-weight: bold;}
+      .text{font-size:100%;}
+    </style>
+  </head>
+  <body>
+    <div class="comment"><em>(Posted By Admin)</em>
+      <div class="date">04:02:2018</div>
+      <div class="author">kira</div>
+      <div class="text">hey mate</div>
+    </div>
+    <div class="comment">
+      <div class="date">04:02:2018</div>
+      <div class="author">kira</div>
+      <div class="text">hey mate</div>
+    </div>
+  </body>
+</html>
